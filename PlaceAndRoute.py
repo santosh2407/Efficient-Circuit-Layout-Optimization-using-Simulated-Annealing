@@ -77,19 +77,19 @@ def plot_cells_and_nets(cells, nets, width, height):
 
 
 if __name__ == "__main__":
-    # Get user input for aspect ratio
+    # Aspect Ratio of the chip
     aspect_ratio = float(input("Enter the aspect ratio (width/height): "))
 
-    # Define the total area
-    total_area = 10000  # You can change this value based on your needs
+    # Total Area of the chip
+    total_area = 10000  # This can be changed
 
-    # Calculate width and height based on the aspect ratio
+    # Calculation of width and height based on aspect ratio
     height = int(math.sqrt(total_area / aspect_ratio))
     width = int(aspect_ratio * height)
 
-    # Define the number of cells
-    num_cells = 20  # Change this number to the desired number of cells
-    num_nets = 15  # Increase the number of nets
+    # This can be configured
+    num_cells = 20  # This is for number of cells
+    num_nets = 15  # This is for number of nets
 
     # Initialization of cells with random positions within the defined area
     cells = [StandardCell(f'cell_{i}', random.randint(0, width), random.randint(0, height)) for i in range(num_cells)]
